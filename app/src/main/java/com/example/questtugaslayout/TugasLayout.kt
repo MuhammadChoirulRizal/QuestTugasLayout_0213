@@ -62,4 +62,102 @@ fun ProfileCardItem(
                     .size(60.dp)
                     .padding(all = 5.dp)
             )
+            Spacer(modifier = Modifier.width(20.dp))
+            Column(
+                modifier = Modifier.weight(1f)
+            ) {
+                Text(
+                    text = stringResource(nameRes),
+                    fontSize = 24.sp,
+                    fontFamily = FontFamily.Cursive,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(R.color.text_white),
+                    modifier = Modifier.padding(top = 5.dp)
+                )
+                if (phoneRes != null) {
+                    Text(
+                        text = stringResource(phoneRes),
+                        fontSize = 16.sp,
+                        color = colorResource(textColorRes),
+                        modifier = Modifier.padding(top = 2.dp)
+                    )
+                }
+                Text(
+                    text = stringResource(addressRes),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = colorResource(textColorRes),
+                    modifier = Modifier.padding(top = 2.dp, bottom = 5.dp)
+                )
             }
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(60.dp)
+                    .padding(all = 5.dp)
+            )
+        }
+    }
+}
+
+@Composable
+fun ActivitasPertama(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .padding(top = 40.dp)
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = stringResource(R.string.Prodi),
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = stringResource(R.string.Univ),
+            fontSize = 22.sp
+        )
+        Spacer(modifier = Modifier.height(25.dp))
+
+        // Kartu 1 (Tanpa No HP)
+        ProfileCardItem(
+            nameRes = R.string.nama_1,
+            phoneRes = null,
+            addressRes = R.string.alamat_1,
+            bgColorRes = R.color.card_bg_grey,
+            textColorRes = R.color.text_yellow
+        )
+
+        // Kartu 2
+        ProfileCardItem(
+            nameRes = R.string.nama_2,
+            phoneRes = R.string.no_hp_2,
+            addressRes = R.string.alamat_2,
+            bgColorRes = R.color.card_bg_purple,
+            textColorRes = R.color.text_cyan
+        )
+
+        // Kartu 3
+        ProfileCardItem(
+            nameRes = R.string.nama_3,
+            phoneRes = R.string.no_hp_3,
+            addressRes = R.string.alamat_3,
+            bgColorRes = R.color.card_bg_blue,
+            textColorRes = R.color.text_cyan
+        )
+
+        // Kartu 4
+        ProfileCardItem(
+            nameRes = R.string.nama_4,
+            phoneRes = R.string.no_hp_4,
+            addressRes = R.string.alamat_4,
+            bgColorRes = R.color.card_bg_green,
+            textColorRes = R.color.text_cyan
+        )
+
+
+    }
+
+}
