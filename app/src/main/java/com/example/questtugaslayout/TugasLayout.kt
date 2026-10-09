@@ -157,7 +157,19 @@ fun ActivitasPertama(modifier: Modifier = Modifier) {
             textColorRes = R.color.text_cyan
         )
 
+        Spacer(modifier = Modifier.height(20.dp))
 
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = stringResource(R.string.copy),
+                modifier = Modifier
+                    .padding(bottom = 50.dp)
+            )
+        }
     }
 
 }
