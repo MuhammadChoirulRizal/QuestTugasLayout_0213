@@ -38,4 +38,28 @@ fun ProfileCardItem(
     @StringRes addressRes: Int,
     @ColorRes bgColorRes: Int,
     @ColorRes textColorRes: Int
-)
+){
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(all = 12.dp),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(bgColorRes)
+        )
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(all = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            val gambar = painterResource(R.drawable.logo_umy)
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(60.dp)
+                    .padding(all = 5.dp)
+            )
+            }
