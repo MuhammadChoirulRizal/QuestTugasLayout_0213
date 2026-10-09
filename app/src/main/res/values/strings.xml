@@ -7,5 +7,7 @@
     <!-- Kartu 1 -->
     <string name="nama_1">Muhammad Choirul Rizal</string>
     <string name="no_hp_1">089521698409</string>
+    <string name="alamat_1">Tarakan</string>
+
 
 </resources>
