@@ -29,3 +29,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+// 1. Fungsi Card terpisah sesuai aturan tugas
+@Composable
+fun ProfileCardItem(
+    @StringRes nameRes: Int,
+    @StringRes phoneRes: Int?,
+    @StringRes addressRes: Int,
+    @ColorRes bgColorRes: Int,
+    @ColorRes textColorRes: Int
+)
